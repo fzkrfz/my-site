@@ -1,142 +1,173 @@
+
 <!DOCTYPE html>
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jianying CHEN — Editorial Design</title>
+    <title>Jianying CHEN | 增长策略与商务运营专家</title>
     <script src="https://tailwindcss.com"></script>
     <style>
         @import url('https://googleapis.com');
-        :root { --paper: #F2F0E9; --ink: #111111; --accent: #D4A373; }
-        body { background: var(--paper); color: var(--ink); font-family: 'Inter', sans-serif; overflow-x: hidden; }
-        .serif { font-family: 'Bodoni Moda', serif; }
-        .giant-text { font-size: 13vw; line-height: 0.85; letter-spacing: -0.05em; }
-        .image-placeholder { background: #E0DDD5; transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1); overflow: hidden; position: relative; }
-        .image-placeholder:hover { transform: scale(0.98); }
-        .image-placeholder img { width: 100%; height: 100%; object-fit: cover; opacity: 0.85; mix-blend-mode: multiply; }
-        .dot-pattern { background-image: radial-gradient(#111 0.5px, transparent 0.5px); background-size: 20px 20px; opacity: 0.1; }
+        
+        :root { 
+            --bg-blue: #E8F1F8; 
+            --navy: #0F172A;    
+            --line: rgba(15, 23, 42, 0.15); 
+        }
+        
+        body { background: var(--bg-blue); color: var(--navy); font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+        .serif { font-family: 'Noto Serif SC', serif; }
+        
+        /* 侧边栏布局：左侧固定宽度，右侧自适应 */
+        .grid-layout { display: grid; grid-template-columns: 200px 1fr; gap: 80px; }
+        
+        @media (max-width: 1024px) { 
+            .grid-layout { grid-template-columns: 1fr; gap: 32px; } 
+            .section-padding { padding: 48px 0; }
+        }
+        
+        .border-fine { border-top: 1px solid var(--line); }
+        .section-padding { padding: 64px 0; }
+        .card-hover:hover { background: rgba(255, 255, 255, 0.3); transition: all 0.4s ease; border-radius: 4px; }
     </style>
 </head>
-<body class="p-4 md:p-8">
+<body class="px-6 md:px-12 lg:px-32">
 
-    <!-- 背景装饰色块 -->
-    <div class="fixed top-0 right-0 w-1/3 h-screen bg-stone-200/30 -z-10"></div>
+    <!-- HEADER: 缩小后的名字，更显精致 -->
+    <nav class="py-10 flex justify-between items-end border-b border-[#0F172A]">
+        <h1 class="text-xl font-bold tracking-tight uppercase">Jianying Chen</h1>
+        <span class="text-[10px] tracking-[0.3em] uppercase opacity-50">Strategy & Operations</span>
+    </nav>
 
-    <main class="max-w-[1600px] mx-auto">
-        <!-- 导航与装饰线 -->
-        <header class="flex justify-between items-start mb-16 border-b border-black pb-4 stagger-in">
-            <div class="text-[10px] font-black tracking-widest uppercase">Portfolio Archive / Vol. 01</div>
-            <div class="text-[10px] font-black tracking-widest uppercase text-right leading-tight">
-                Data Driven<br>Sales Growth
-            </div>
-        </header>
-
-        <!-- 第一屏：大字与图片的视觉错位 -->
-        <section class="grid grid-cols-1 md:grid-cols-12 gap-0 mb-40">
-            <div class="md:col-span-8 z-10">
-                <h1 class="giant-text font-black mb-8">
-                    JIANYING<br><span class="serif italic">CHEN—</span>
-                </h1>
-                <p class="max-w-md text-lg leading-snug font-light opacity-80 mb-12">
-                    专注于跨境业务体系构建的销售增长官。在复杂市场中通过 <span class="font-bold border-b border-black">标准化体系 (SOP)</span> 实现业绩的可持续爆发。
+    <!-- HERO: 缩小标题字号，从 7xl 降至 4xl，更稳重 -->
+    <header class="section-padding">
+        <div class="grid-layout">
+            <div class="serif text-4xl leading-tight font-semibold tracking-tight">增长策略与<br>体系构建.</div>
+            <div class="max-w-2xl">
+                <p class="text-2xl font-extralight leading-relaxed mb-8 opacity-90">
+                    拥有 7 年跨境销售与运营经验，专注于从 0 到 1 构建标准化体系，通过数据穿透实现业务的可持续增长。
                 </p>
+                <div class="flex flex-wrap gap-4">
+                    <span class="text-[10px] font-bold uppercase tracking-widest py-1 border-b border-navy">SOP Architecture</span>
+                    <span class="text-[10px] font-bold uppercase tracking-widest py-1 border-b border-navy">Data Growth</span>
+                    <span class="text-[10px] font-bold uppercase tracking-widest py-1 border-b border-navy">CRM System</span>
+                </div>
             </div>
-            <!-- 艺术图片位置 -->
-            <div class="md:col-span-4 h-[500px] md:-mt-20 image-placeholder">
-                <img src="https://unsplash.com" alt="Abstract Art">
-                <div class="absolute bottom-4 right-4 text-[10px] uppercase font-bold tracking-widest text-white mix-blend-difference">Abstract Space / 01</div>
-            </div>
-        </section>
+        </div>
+    </header>
 
-        <!-- 核心业绩：深色大色块设计 -->
-        <section class="mb-40">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-0">
-                <!-- 左侧黑色装饰块 -->
-                <div class="md:col-span-4 bg-[#1A1A1A] p-12 text-[#F2F0E9] flex flex-col justify-between">
-                    <h2 class="text-3xl serif italic leading-tight">The Power of<br>Data Analysis.</h2>
-                    <div class="dot-pattern w-full h-32 my-12"></div>
-                    <p class="text-xs uppercase tracking-[0.2em] opacity-60 italic">Core Achievements</p>
+    <!-- CORE ADVANTAGE -->
+    <section class="border-fine section-padding">
+        <div class="grid-layout">
+            <div class="text-[10px] font-bold uppercase tracking-[0.2em] opacity-40">Expertise / 核心优势</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="p-2 card-hover">
+                    <h3 class="serif text-lg mb-4 italic opacity-80">业务核心能力</h3>
+                    <ul class="text-sm space-y-4 opacity-80 leading-relaxed">
+                        <li><strong>• 销售全周期管理：</strong>从线索获取到转化的标准化建模与体系优化。</li>
+                        <li><strong>• CRM 数据分析：</strong>精通 Salesforce，通过数据驱动业绩预测与策略迭代。</li>
+                        <li><strong>• 跨国渠道拓展：</strong>精通海外 B2B 机构对接与 B2C 高净值客户转化。</li>
+                    </ul>
                 </div>
-                <!-- 右侧数据块 -->
-                <div class="md:col-span-8 bg-white p-12 grid grid-cols-1 sm:grid-cols-2 gap-16 border border-black border-l-0">
-                    <div>
-                        <span class="text-[10px] font-black uppercase tracking-widest">Revenue</span>
-                        <div class="text-7xl serif font-black my-4">£50M+</div>
-                        <p class="text-xs leading-relaxed opacity-60">连续 18 个月蝉联全球销售团队 TOP 3 席位，具备极强的复杂业务处理能力。</p>
-                    </div>
-                    <div>
-                        <span class="text-[10px] font-black uppercase tracking-widest">Efficiency</span>
-                        <div class="text-7xl serif font-black my-4">0.5%</div>
-                        <p class="text-xs leading-relaxed opacity-60">通过全链路 SOP 闭环设计，将服务差错率压降至行业极致。 </p>
-                    </div>
-                    <div>
-                        <span class="text-[10px] font-black uppercase tracking-widest">Retention</span>
-                        <div class="text-7xl serif font-black my-4">28%</div>
-                        <p class="text-xs leading-relaxed opacity-60">客户生命周期深度运营，复购率较初始值提升 180%。</p>
-                    </div>
-                    <div class="bg-stone-100 flex items-center justify-center p-8 italic serif text-xl text-center">
-                        "用数据穿透业务，<br>用流程提升转化。"
-                    </div>
+                <div class="p-2 card-hover">
+                    <h3 class="serif text-lg mb-4 italic opacity-80">工作竞争优势</h3>
+                    <ul class="text-sm space-y-4 opacity-80 leading-relaxed">
+                        <li><strong>• SOP 极效执行：</strong>长期将业务差错率维持在 0.5% 以下的高标准交付。</li>
+                        <li><strong>• 约克大学硕士背景：</strong>深谙中外商务沟通逻辑，英语流利，视野开阔。</li>
+                        <li><strong>• 复合型背景：</strong>具备财务管理与工商管理的双重商业敏锐度。</li>
+                    </ul>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- 职业履历：带有几何点缀的列表 -->
-        <section class="mb-40 grid grid-cols-1 md:grid-cols-12 gap-12">
-            <div class="md:col-span-3">
-                <div class="sticky top-12">
-                    <h2 class="text-5xl serif font-black mb-4">Select<br>Works</h2>
-                    <div class="w-12 h-1 bg-black mb-12"></div>
-                </div>
-            </div>
-            <div class="md:col-span-9 space-y-32">
-                <div class="group relative">
-                    <div class="flex flex-col md:flex-row justify-between mb-8 border-b-2 border-black pb-4">
-                        <h3 class="text-4xl serif font-black italic">Servcorp / 世服宏图</h3>
-                        <span class="text-sm font-bold uppercase tracking-tighter self-end">Manager / 2023-2024</span>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <p class="text-sm leading-relaxed font-medium">负责高端灵活办公业务。入职后迅速扭转业绩赤字，增收超 60 万人民币。主导社群增长策略，新业务转化率稳定在 50%。</p>
-                        <div class="h-32 bg-stone-200 image-placeholder">
-                            <img src="https://unsplash.com" alt="Office">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="group relative">
-                    <div class="flex flex-col md:flex-row justify-between mb-8 border-b-2 border-black pb-4">
-                        <h3 class="text-4xl serif font-black italic">Vita Group / 维塔学舍</h3>
-                        <span class="text-sm font-bold uppercase tracking-tighter self-end">Business Manager / 2019-2023</span>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <p class="text-sm leading-relaxed font-medium">管理跨国销售梯队。基于 Salesforce 搭建标准化销售看板，个人年均销售额 400 万+英镑，团队目标达成率 105%+。</p>
-                        <div class="h-32 bg-[#1A1A1A]"></div> <!-- 深色装饰块 -->
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="bg-[#1A1A1A] text-[#F2F0E9] p-12 md:p-24 -mx-4 md:-mx-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-end">
+    <!-- TOOLS -->
+    <section class="border-fine py-16">
+        <div class="grid-layout items-start">
+            <div class="text-[10px] font-bold uppercase tracking-[0.2em] opacity-40">Tool Stack / 工具栈</div>
+            <div class="flex flex-wrap gap-x-16 gap-y-8">
                 <div>
-                    <h2 class="text-7xl md:text-[9vw] serif font-black italic mb-12">Let's Talk.</h2>
-                    <a href="mailto:fzkrfz@yeah.net" class="text-2xl md:text-4xl font-light hover:text-stone-400 transition-all border-b border-stone-500 pb-2">fzkrfz@yeah.net</a>
-                    <p class="mt-8 font-bold tracking-widest text-xs uppercase">Shanghai / +86 183 1713 2278</p>
+                    <span class="text-[10px] font-black uppercase opacity-30 mb-2 block">CRM</span>
+                    <span class="text-sm font-semibold tracking-tight">Salesforce, Microsoft Dynamics</span>
                 </div>
-                <div class="text-right flex flex-col items-end">
-                    <div class="w-20 h-20 bg-stone-500 mb-12"></div>
-                    <p class="text-[10px] uppercase font-bold tracking-[0.4em] opacity-40 mb-4 italic">Education Background</p>
-                    <p class="text-xl serif italic">University of York — MSc Management</p>
-                    <p class="text-xl serif italic">SUIBE — BBA & Finance</p>
+                <div>
+                    <span class="text-[10px] font-black uppercase opacity-30 mb-2 block">Data Analysis</span>
+                    <span class="text-sm font-semibold tracking-tight">Excel Pivot, SQL (In-progress)</span>
+                </div>
+                <div>
+                    <span class="text-[10px] font-black uppercase opacity-30 mb-2 block">Business</span>
+                    <span class="text-sm font-semibold tracking-tight">WeChat BIZ, XiaoHongShu, CRM Analytics</span>
                 </div>
             </div>
-            <div class="mt-32 pt-8 border-t border-stone-800 flex justify-between text-[8px] uppercase tracking-[0.5em] opacity-30">
-                <span>©2024 Jianying Chen</span>
-                <span>Designed for Growth</span>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="border-fine section-padding">
+        <div class="grid-layout">
+            <div class="text-[10px] font-bold uppercase tracking-[0.2em] opacity-40">Experience / 职业历程</div>
+            <div class="space-y-20">
+                <!-- Servcorp -->
+                <div class="group">
+                    <div class="flex justify-between items-baseline mb-4 border-b border-navy/10 pb-2">
+                        <h4 class="serif text-2xl italic font-bold">Servcorp (世服宏图)</h4>
+                        <span class="text-[10px] font-bold opacity-40 tracking-widest">2023.03 - 2024.03</span>
+                    </div>
+                    <p class="text-[10px] font-black uppercase tracking-widest text-blue-800 mb-4">Flexible Workspace Manager / 上海</p>
+                    <ul class="text-sm space-y-3 opacity-70 leading-relaxed max-w-xl">
+                        <li>• 入职半年扭转业绩赤字，增收 60 万+，通过 SOP 优化显著提升运营效率。</li>
+                        <li>• 独立对接 10+ 商务机构，实现新业务转化率 50% 增长。</li>
+                    </ul>
+                </div>
+
+                <!-- Vita Group -->
+                <div class="group">
+                    <div class="flex justify-between items-baseline mb-4 border-b border-navy/10 pb-2">
+                        <h4 class="serif text-2xl italic font-bold">Vita Group (维塔学舍)</h4>
+                        <span class="text-[10px] font-bold opacity-40 tracking-widest">2019.10 - 2023.01</span>
+                    </div>
+                    <p class="text-[10px] font-black uppercase tracking-widest text-blue-800 mb-4">Business Manager / 英国 & 上海</p>
+                    <ul class="text-sm space-y-3 opacity-70 leading-relaxed max-w-xl">
+                        <li>• 管理销售额超 5000 万英镑，连续 18 个月全球 TOP 3，个人年产出 400 万+。</li>
+                        <li>• 重构 Salesforce 看板体系，驱动复购率从 10% 提升至 28%。</li>
+                    </ul>
+                </div>
+
+                <!-- Student.com -->
+                <div class="group">
+                    <div class="flex justify-between items-baseline mb-4 border-b border-navy/10 pb-2">
+                        <h4 class="serif text-2xl italic font-bold">Student.com (学旅家)</h4>
+                        <span class="text-[10px] font-bold opacity-40 tracking-widest">2017.06 - 2019.09</span>
+                    </div>
+                    <p class="text-[10px] font-black uppercase tracking-widest text-blue-800 mb-4">Senior Sales Consultant / 上海</p>
+                    <ul class="text-sm space-y-3 opacity-70 leading-relaxed max-w-xl">
+                        <li>• 入职 3 个月达成全队转化率之冠，并负责销售标准化话术模型的优化。</li>
+                    </ul>
+                </div>
             </div>
-        </footer>
-    </main>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-[#0F172A] pt-12 pb-24">
+        <div class="grid-layout">
+            <div>
+                <h2 class="serif text-3xl mb-6 italic opacity-80">Let's Connect.</h2>
+                <div class="text-sm space-y-2 opacity-90">
+                    <p>+86 183 1713 2278</p>
+                    <p class="font-bold underline underline-offset-4">fzkrfz@yeah.net</p>
+                </div>
+            </div>
+            <div class="flex flex-col justify-end md:text-right">
+                <div class="mb-8">
+                    <p class="text-[10px] font-bold uppercase tracking-widest mb-3 opacity-30 italic">Academic</p>
+                    <p class="serif text-lg text-blue-900">约克大学 — 管理学与商务金融硕士</p>
+                    <p class="serif text-sm opacity-60">上海对外经贸大学 — 财务管理 & 工商管理学士</p>
+                </div>
+                <p class="text-[8px] opacity-30 uppercase tracking-[0.4em]">© 2024 Jianying Chen. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>

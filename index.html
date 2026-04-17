@@ -3,46 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>陈剑颖 | Jiany颖 Chen - Personal Website</title>
+    <title>Jianying Chen | 陈剑颖 - Portfolio</title>
     <script src="https://tailwindcss.com"></script>
     <link href="https://googleapis.com" rel="stylesheet">
     <style>
-        body { background-color: #F9F8F5; font-family: 'Inter', sans-serif; color: #1A1A1A; }
+        :root { --paper: #F9F8F5; --ink: #1A1A1A; --accent: #D4A373; }
+        body { background-color: var(--paper); color: var(--ink); font-family: 'Inter', sans-serif; transition: all 0.5s ease; }
         .serif { font-family: 'Playfair Display', serif; }
+        .line-growth { transition: width 1s ease-out; width: 0; }
+        section:hover .line-growth { width: 100%; }
+        ::selection { background: var(--accent); color: white; }
     </style>
 </head>
-<body class="p-8 md:p-20 lg:p-32">
-    <!-- Hero Section -->
-    <header class="max-w-5xl mx-auto mb-32">
-        <h1 class="text-6xl md:text-8xl serif mb-8 tracking-tighter">陈剑颖</h1>
-        <p class="text-2xl md:text-3xl font-light leading-relaxed max-w-2xl">
-            数据驱动的销售增长官 & 商务运营专家。专注于跨境业务体系搭建与转化优化。
-        </p>
+<body class="selection:bg-stone-200">
+
+    <!-- 导航栏 -->
+    <nav class="fixed w-full mix-blend-difference z-50 p-6 flex justify-between items-center text-white">
+        <span class="font-semibold tracking-widest text-sm uppercase">Edition 2024</span>
+        <div class="space-x-8 text-sm uppercase tracking-widest">
+            <a href="mailto:fzkrfz@yeah.net" class="hover:opacity-50 transition">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section: 杂志封面感 -->
+    <header class="min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-24">
+        <div class="max-w-7xl">
+            <p class="text-sm md:text-base mb-6 tracking-[0.2em] uppercase opacity-60">Strategic Sales & Operations Manager</p>
+            <h1 class="text-[12vw] md:text-[10vw] serif leading-[0.85] tracking-tighter mb-10">
+                Jiany颖<br><span class="italic text-stone-400">Chen.</span>
+            </h1>
+            <div class="grid md:grid-cols-2 gap-12 items-end">
+                <p class="text-xl md:text-2xl font-light leading-relaxed text-stone-600">
+                    数据驱动的增长专家，擅长在跨境业务中通过 <span class="text-black font-medium underline underline-offset-4">标准化体系(SOP)</span> 与 <span class="text-black font-medium underline underline-offset-4">全链路数据分析</span> 驱动业绩爆发。
+                </p>
+                <div class="flex space-x-4">
+                    <span class="text-xs border border-stone-300 rounded-full px-4 py-2 uppercase">London · York</span>
+                    <span class="text-xs border border-stone-300 rounded-full px-4 py-2 uppercase">Shanghai · Long-term</span>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <!-- Core Value - Big Typography -->
-    <section class="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 mb-32">
-        <div class="border-t border-black pt-8">
-            <span class="text-sm uppercase tracking-widest">Achievements</span>
-            <h2 class="text-4xl serif mt-4 mb-4 underline decoration-1 underline-offset-8">£50,000,000+</h2>
-            <p class="text-gray-600">累计管理销售额，连续18个月蝉联全球销售团队 TOP3。</p>
-        </div>
-        <div class="border-t border-black pt-8">
-            <span class="text-sm uppercase tracking-widest">Efficiency</span>
-            <h2 class="text-4xl serif mt-4 mb-4 underline decoration-1 underline-offset-8">0.5% Error Rate</h2>
-            <p class="text-gray-600">搭建全流程 SOP 体系，将服务差错率控制在极低水平。</p>
+    <!-- 核心成就: 大字号排版 -->
+    <section class="py-32 px-6 md:px-12 lg:px-24 bg-stone-100">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8">
+                <div class="group">
+                    <div class="h-[1px] bg-stone-300 w-full mb-8 relative">
+                        <div class="h-[1px] bg-black absolute top-0 left-0 line-growth"></div>
+                    </div>
+                    <span class="text-xs uppercase tracking-widest opacity-50">Sales Performance</span>
+                    <h3 class="text-6xl serif my-4">£50M+</h3>
+                    <p class="text-stone-500 leading-relaxed">累计管理销售额，连续 18 个月蝉联 Vita Group 全球销售团队 TOP 3。</p>
+                </div>
+                <div class="group">
+                    <div class="h-[1px] bg-stone-300 w-full mb-8 relative">
+                        <div class="h-[1px] bg-black absolute top-0 left-0 line-growth"></div>
+                    </div>
+                    <span class="text-xs uppercase tracking-widest opacity-50">Efficiency Optimization</span>
+                    <h3 class="text-6xl serif my-4">0.5%</h3>
+                    <p class="text-stone-500 leading-relaxed">主导构建全流程 SOP，将团队服务差错率压降至极低水平，复购率由 10% 提升至 28%。</p>
+                </div>
+                <div class="group">
+                    <div class="h-[1px] bg-stone-300 w-full mb-8 relative">
+                        <div class="h-[1px] bg-black absolute top-0 left-0 line-growth"></div>
+                    </div>
+                    <span class="text-xs uppercase tracking-widest opacity-50">Career Turnaround</span>
+                    <h3 class="text-6xl serif my-4">增收60W+</h3>
+                    <p class="text-stone-500 leading-relaxed">入职 Servcorp 半年内扭转业绩赤字，凭出色表现获澳洲总部培训机会。</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Footer / Contact -->
-    <footer class="max-w-5xl mx-auto border-t border-black pt-12 flex flex-col md:flex-row justify-between items-start gap-8">
-        <div class="text-xl">
-            <p>18317132278</p>
-            <p>fzkrfz@yeah.net</p>
+    <!-- 职业履历: 杂志目录排版 -->
+    <section class="py-32 px-6 md:px-12 lg:px-24">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row">
+            <div class="md:w-1/3 mb-12 md:mb-0">
+                <h2 class="text-4xl serif sticky top-32">Professional<br>Journey</h2>
+            </div>
+            <div class="md:w-2/3 space-y-24">
+                <!-- Servcorp -->
+                <div class="group">
+                    <div class="flex justify-between items-baseline border-b border-stone-200 pb-4 mb-6">
+                        <h4 class="text-2xl font-semibold uppercase tracking-tighter">Servcorp / 上海世服宏图</h4>
+                        <span class="text-stone-400">2023 - 2024</span>
+                    </div>
+                    <p class="text-xl text-stone-600 leading-relaxed italic mb-4">灵活办公客户经理</p>
+                    <ul class="text-stone-500 space-y-2">
+                        <li>• 运营 100+ 高价值客户，成功丰富业务生态，新业务转化率达 50%。</li>
+                        <li>• 策划多场社群活动，带动线索量增长 6%，成功开辟新增长曲线。</li>
+                    </ul>
+                </div>
+                <!-- Vita Group -->
+                <div class="group">
+                    <div class="flex justify-between items-baseline border-b border-stone-200 pb-4 mb-6">
+                        <h4 class="text-2xl font-semibold uppercase tracking-tighter">Vita Group / 维塔学舍</h4>
+                        <span class="text-stone-400">2019 - 2023</span>
+                    </div>
+                    <p class="text-xl text-stone-600 leading-relaxed italic mb-4">商务经理 / 销售代表</p>
+                    <p class="text-stone-500 mb-4">管理 4 人团队，利用 Salesforce 搭建数据看板，团队年均业绩达标率达 105%+。</p>
+                </div>
+            </div>
         </div>
-        <a href="mailto:fzkrfz@yeah.net" class="bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-all">
-            开始商务合作 →
-        </a>
+    </section>
+
+    <!-- 脚注: 干净利落 -->
+    <footer class="py-20 px-6 md:px-12 lg:px-24 bg-stone-900 text-stone-400">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-end gap-12">
+            <div>
+                <h2 class="text-6xl serif text-white mb-8 italic">Say Hello.</h2>
+                <div class="space-y-2">
+                    <p class="hover:text-white transition">Shanghai, China</p>
+                    <p class="hover:text-white transition">18317132278</p>
+                    <p class="text-2xl text-white mt-4 underline decoration-stone-500 underline-offset-8">fzkrfz@yeah.net</p>
+                </div>
+            </div>
+            <div class="text-right">
+                <p class="text-xs uppercase tracking-[0.3em] mb-4">Education</p>
+                <p class="text-white">University of York (MSc)</p>
+                <p class="text-white">SUIBE (BBA & FM)</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-24 pt-8 border-t border-stone-800 text-[10px] uppercase tracking-widest flex justify-between">
+            <span>© 2024 Jianying Chen. All Rights Reserved.</span>
+            <span>Design: Editorial Minimalist</span>
+        </div>
     </footer>
+
 </body>
 </html>
